@@ -1,0 +1,162 @@
+{
+    "name": "Stephen Hebert",
+    "summary": "Full stack web development professional seeking fully remote opportunities in development, management, and technical training.",
+    "email": "stephenjosephhebert@gmail.com",
+    "phone": "(225) 715-5191",
+    "linkedin": "stephenjosephhebert",
+    "github": "stephenhebert",
+    "location": "Lafayette, LA",
+    "education": [
+        {
+            "institution": "Louisiana State University",
+            "location": "Baton Rouge, LA",
+            "degree": "Bachelor of Science: Computer Science",
+            "date": "May 2006"
+        }
+    ],
+    "skills": [
+        "Javascript", 
+        "Vue", 
+        "SQL", 
+        "HTML", 
+        "Bootstrap", 
+        "Agile", 
+        "ASP.Net Core", 
+        "PHP", 
+        "CSS", 
+        "NPM/Webpack", 
+        "AWS S3", 
+        "Github",
+        "Windows", 
+        "*nix", 
+        "Active Directory", 
+        "IIS", 
+        "Octopus", 
+        "Veracode"
+    ],
+    "workHistory": [
+        {
+            "organization": "State of Louisiana",
+            "location": "Baton Rouge, LA",
+            "roles": [
+                {
+                    "title": "Lead Developer / Manager",
+                    "fromDate": "May 2019",
+                    "toDate": "Present",
+                    "description": "",
+                    "highlights": [
+                        ""
+                    ]
+                },
+                {
+                    "title": "Senior Developer",
+                    "fromDate": "Jul 2018",
+                    "toDate": "May 2019",
+                    "description": "",
+                    "highlights": [
+                        ""
+                    ],
+                    "environment": ""
+                }
+            ]
+        },
+        {
+            "organization": "Louisiana State University",
+            "location": "Baton Rouge, LA",
+            "roles": [
+                {
+                    "title": "Technical Analyst",
+                    "fromDate": "Dec 2015",
+                    "toDate": "Jul 2018",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "organization": "Self",
+            "location": "Seattle, WA and Baton Rouge, LA",
+            "roles": [
+                {
+                    "title": "Developer, Consultant, Technical Trainer",
+                    "fromDate": "Nov 2001",
+                    "toDate": "Dec 2015",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "organization": "Sharedband International",
+            "location": "Ipswich, England, UK and Seattle, WA",
+            "roles": [
+                {
+                    "title": "Developer & Support Analyst",
+                    "fromDate": "Dec 2006",
+                    "toDate": "Apr 2008",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "organization": "Espion International",
+            "location": "Baton Rouge, LA",
+            "roles": [
+                {
+                    "title": "QA & Support Analyst",
+                    "fromDate": "Jun 2006",
+                    "toDate": "Oct 2006",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "organization": "Louisiana School Boards Association",
+            "location": "Baton Rouge, LA",
+            "roles": [
+                {
+                    "title": "Developer & Support Analyst",
+                    "fromDate": "Nov 2001",
+                    "toDate": "Jun 2006",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "organization": "Louisiana State University",
+            "location": "Baton Rouge, LA",
+            "roles": [
+                {
+                    "title": "Technical Instructor / DBA",
+                    "fromDate": "Nov 2001",
+                    "toDate": "Jun 2006",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "organization": "32 Studios",
+            "location": "Brusly, LA",
+            "roles": [
+                {
+                    "title": "Developer",
+                    "fromDate": "Aug 2000",
+                    "toDate": "May 2003",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "organization": "State of Louisiana",
+            "location": "Baton Rouge, LA",
+            "roles": [
+                {
+                    "title": "Support Technician",
+                    "fromDate": "May 2001",
+                    "toDate": "Nov 2001",
+                    "description": ""
+                }
+            ]
+        }
+
+
+    ]
+}

@@ -1,0 +1,297 @@
+<!doctype html>
+<!-- TO DO -->
+<!-- . revamp font import? -->
+<!-- . tree shaking? -->
+<!-- . replace absolute width with relative width -->
+<!-- . print style sheet vs screen -->
+<!-- . add links  -->
+<!-- . obscure email address? -->
+<!-- . json input  -->
+<!-- . ascii art -->
+<!-- . web version -->
+<!-- . update to vue3 -->
+<!-- . loading animation -->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Stephen Hebert</title>
+    <meta name="description" content="Stephen Hebert">
+    <meta name="author" content="Stephen Hebert">
+
+    <!-- <link rel="stylesheet" href="css/bootstrap-grid.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<body class="bg-dark">
+    <div id="main" class="container-fluid mx-auto my-4 bg-white py-4 p-5"
+        style="max-width: 8.5in; max-height: 11in; min-height: 11in;" v-if="vm" v-cloak>
+
+        <div class="row">
+            <div class="col-8">
+                <div class="name" v-html="vm.name"></div>
+                <div class="summary" v-if="vm.summary" v-html="vm.summary"></div>
+            </div>
+            <div class="col-4 featured text-end">
+                <div v-if="vm.email"><i class="fas fa-envelope"></i> {{vm.email}}</div>
+                <div v-if="vm.phone"><i class="fas fa-phone"></i> <a target="_blank" :href="phoneUrl"><b>{{vm.phone}}</b></a> </div>
+                <div v-if="vm.linkedin"><i class="fab fa-linkedin"></i> <a target="_blank" :href="linkedinUrl">{{vm.linkedin}}</a></div>
+                <div v-if="vm.github"><i class="fab fa-github"></i> <a target="_blank" :href="githubUrl">{{vm.github}}</a></div>
+                <div v-if="vm.location"><i class="fas fa-map-marker-alt"></i> {{vm.location}}</div>
+            </div>
+        </div>
+        <hr class="mt-1 mb-2 minor">
+        <div class="row">
+            <div class="col-8" v-if="vm.skills">
+                <div class="section-title text-uppercase">
+                    <!-- <i class="fas fa-fist-raised"></i> -->
+                    <i class="fas fa-hammer"></i>
+                    Skills</div>
+                <p v-html="formattedSkills"></p>
+            </div>
+            <div class="col-4" v-if="vm.education">
+                <div class="section-title text-uppercase"><i class="fas fa-graduation-cap"></i> Education</div>
+                <div v-for="item in vm.education">
+                    <span class="organization">{{item.institution}},</span>
+                    <span class="location">{{item.location}}&mdash;</span>
+                    <span class="emphasized">{{item.degree}}</span>
+                    <span class="comment">{{item.date}}</span>
+                </div>
+            </div>
+            <!-- <div class="col-2">
+                <div class="section-title text-uppercase"><i class="fas fa-users"></i> References</div>
+                <p>Available upon request</p>
+            </div> -->
+        </div>
+        <!-- <hr class="mt-1 mb-2 minor"> -->
+        <div class="row">
+            <div class="col-12">
+                <div class=" section-title text-uppercase">
+                    <i class="fas fa-history"></i>
+                    Experience</div>
+            </div>
+            <div class="vh-100" style="column-count: 2; column-fill: auto;">
+                <div class="mb-2" v-for="item in vm.workHistory">
+                    <div>
+                        <span class="organization" v-if="item.organization">{{item.organization}},</span>
+                        <span class="location" v-if="item.location" v-html="item.location"></span>    
+                    </div>
+                    <div v-for="role in item.roles">
+                        <div class="mb-1">
+                            <span class="emphasized d-inline-block" v-if="role.title" v-html="role.title"></span>
+                            <span class="comment d-inline-block" v-if="role.fromDate">{{role.fromDate}} - {{role.toDate}}</span>    
+                        </div>
+                        <p class="mt-1" v-if="role.description" v-html="role.description"></p>
+                        <div v-if="role.environment">
+                            <span class="comment">Environment&mdash; {{role.environment}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div id="lipsum">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum molestie libero ligula. Sed
+                    mattis dapibus faucibus. Nulla dictum consequat ante, ultricies mollis mi cursus sit amet. In tortor
+                    mauris, pellentesque quis vestibulum sed, feugiat et nulla. Curabitur vulputate, mi nec semper
+                    semper, orci est eleifend orci, cursus interdum turpis ante quis purus. Nunc et viverra sem. Integer
+                    non neque eros. Praesent mattis dapibus lacinia. Aenean ut ex sit amet nisl tincidunt interdum.
+                    Nullam vitae dolor lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean
+                    vehicula ex eu molestie maximus. Fusce porttitor arcu quis pulvinar gravida.
+                </p>
+                <p>
+                    Vestibulum at elementum ligula. Vestibulum venenatis, libero congue imperdiet dictum, purus libero
+                    pellentesque mi, quis hendrerit quam nisl sed metus. Vivamus diam odio, sollicitudin vel euismod
+                    eget, rhoncus nec massa. Phasellus at eleifend leo. Phasellus et metus vitae lorem commodo interdum
+                    vitae sit amet sem. Vestibulum justo magna, condimentum et tincidunt at, maximus ac mi. Vestibulum
+                    at ultricies leo. Proin augue ligula, pulvinar in consectetur in, molestie sed sem. In dignissim
+                    eget lectus sit amet porttitor.
+                </p>
+                <p>
+                    Mauris congue bibendum nibh, ut convallis eros. Mauris lacinia malesuada nulla at mattis. Sed eget
+                    cursus urna. Nulla facilisi. Aliquam aliquam nibh vel nibh gravida tincidunt. Suspendisse vestibulum
+                    aliquet eros, eu condimentum elit scelerisque et. Duis at ex metus. Suspendisse ante augue, molestie
+                    nec finibus non, porta at lorem. In lorem nunc, semper eget risus a, placerat aliquam orci. Cras
+                    molestie finibus massa, ac vestibulum odio vestibulum sed.
+                </p>
+                <p>
+                    Cras pulvinar dignissim mattis. Nullam feugiat eros ut magna scelerisque, id mattis nulla
+                    vestibulum. Curabitur mattis tristique nibh molestie commodo. Phasellus sed arcu nec dui maximus
+                    sodales eget at magna. Maecenas sem nisi, vestibulum sit amet bibendum nec, tempus nec felis.
+                    Quisque ut diam dapibus, rutrum mi et, ultricies massa. Nunc consectetur, tellus sed malesuada
+                    sollicitudin, sem ante mattis turpis, quis tincidunt odio nulla sit amet ex.
+                </p>
+                <p>
+                    Phasellus id bibendum justo, vel lacinia urna. Aliquam vel elit ut justo euismod eleifend. Nunc
+                    vitae luctus risus. Pellentesque commodo rhoncus massa. In ultrices vitae augue vitae ultricies.
+                    Maecenas eu velit eget turpis suscipit molestie eu bibendum nunc. Suspendisse potenti. Curabitur
+                    fermentum porttitor lacus eu placerat. Mauris rhoncus leo ut sem condimentum, at fringilla mauris
+                    mollis. Vivamus non blandit sem. Sed ut malesuada ipsum. Orci varius natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Praesent dictum eros nec diam eleifend scelerisque. Sed
+                    vitae est fringilla, facilisis felis non, suscipit ligula. Vestibulum aliquet lectus justo, ut
+                    dapibus felis imperdiet vel. Vivamus et dictum augue.
+                </p>
+                <p>
+                    Aliquam vitae orci ac odio sodales ornare non quis enim. Aliquam porta, dui finibus consectetur
+                    tristique, orci dui tempor quam, eget aliquam nisi nisl eget lectus. Praesent rutrum, arcu sit amet
+                    tristique posuere, dolor turpis ultricies nibh, vel pharetra tortor ligula eu metus. Ut semper enim
+                    volutpat, aliquam ex non, fermentum lacus. Proin ac arcu sit amet neque venenatis semper vel eu
+                    nunc. Ut lacus ex, aliquet sed convallis sit amet, mattis nec risus. Nulla quis ultricies dui. Duis
+                    nec porta nunc. Integer luctus est at lacus porta, vitae mattis nulla vestibulum.
+                </p>
+                <p>
+                    Nullam ac interdum ipsum, quis mattis enim. Cras massa ligula, suscipit ac est nec, pretium laoreet
+                    augue. Maecenas at finibus arcu, vel efficitur tellus. Cras ultricies lorem risus, in lobortis nulla
+                    fringilla sed. Mauris sed augue gravida, elementum urna ut, volutpat nulla. Etiam quam ipsum,
+                    venenatis eget hendrerit ut, posuere at magna. Sed sem magna, facilisis eget diam at, tincidunt
+                    consectetur neque. Pellentesque ante justo, bibendum et mattis et, mollis faucibus dui. Nullam
+                    vestibulum leo a rhoncus rhoncus. Phasellus maximus laoreet orci, vehicula tincidunt tortor cursus
+                    vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Morbi vel pretium mauris, eget hendrerit arcu. Vestibulum quis felis felis. Nunc justo massa,
+                    consectetur consectetur metus sit amet, volutpat molestie nunc. Vivamus vel auctor est, pretium
+                    mollis felis.
+                </p>
+                <p>
+                    Nullam vel aliquet orci. Donec in dictum leo. Aliquam congue risus vitae suscipit blandit. Integer
+                    sem purus, ultrices sed auctor non, tempor non purus. Suspendisse ullamcorper lorem et urna finibus,
+                    ac egestas arcu tempor. Suspendisse purus diam, rhoncus at imperdiet at, tempor vel eros. Duis
+                    feugiat, purus et sagittis hendrerit, risus quam consectetur lectus, ut aliquam arcu nisl nec purus.
+                    Nulla aliquam ultrices aliquam. Aenean blandit ligula sed justo posuere maximus. Donec viverra
+                    mauris sit amet lorem posuere rutrum. In dui nisl, lacinia ut vulputate a, aliquet vel urna. Cras
+                    commodo libero nec augue cursus, sed egestas elit consequat. Praesent lobortis purus in tellus
+                    aliquet, eget mollis elit venenatis. Morbi nec lobortis urna. Ut lacus ipsum, lacinia vitae
+                    pellentesque nec, porttitor quis eros. Morbi tincidunt egestas aliquet.
+                </p>
+                <p>
+                    Sed malesuada dapibus ex, ut tempus enim posuere a. Aliquam sem diam, condimentum vel lobortis ut,
+                    consequat non lorem. Aenean lobortis vestibulum elit, vel tempus nulla dapibus sed. Aenean euismod,
+                    diam sit amet egestas viverra, lacus diam porta felis, eu convallis metus arcu at nisi. Curabitur
+                    lacinia purus eget mauris cursus dictum. Suspendisse orci leo, auctor in mauris in, imperdiet
+                    iaculis ante. Nulla convallis elementum porttitor. Aenean suscipit ornare nunc vitae imperdiet.
+                    Morbi eu auctor justo, eu cursus nisl. Donec ac dui dolor. Fusce eget vestibulum ipsum. Sed egestas
+                    finibus convallis. Nunc viverra suscipit ornare.
+                </p>
+                <p>
+                    Praesent a nibh eleifend, commodo est id, vehicula sem. Nulla facilisi. Integer congue velit at
+                    posuere aliquam. Nunc et ipsum elit. Pellentesque sed purus volutpat, gravida nunc varius, faucibus
+                    nunc. Integer lacus lectus, blandit sit amet vestibulum nec, posuere id nisl. Nulla a est vel orci
+                    lacinia blandit in ac enim.
+                </p>
+                <p>
+                    Cras id vulputate metus. Fusce malesuada risus non accumsan eleifend. Pellentesque vehicula magna
+                    sed tellus tincidunt euismod. Vivamus consequat interdum erat volutpat accumsan. Aliquam vel rutrum
+                    ante. Proin vitae nisl fermentum, vehicula metus a, egestas elit. Aliquam varius ac urna ac euismod.
+                    Nam viverra hendrerit sem et suscipit.
+                </p>
+                <p>
+                    Pellentesque ac gravida quam. Suspendisse laoreet, enim ut bibendum rutrum, est augue rutrum lorem,
+                    at vestibulum magna ex sit amet augue. Duis a viverra turpis, id porttitor eros. Integer sagittis
+                    feugiat tortor ut luctus. Cras nec erat pellentesque, porttitor est in, luctus nunc. In erat odio,
+                    imperdiet sit amet nulla at, maximus ornare eros. Sed dapibus venenatis rutrum. Maecenas scelerisque
+                    est quam, et scelerisque libero egestas et. Nullam ornare feugiat suscipit. Nam pretium blandit
+                    commodo.
+                </p>
+                <p>
+                    Cras at risus sit amet augue lobortis interdum. Proin neque ligula, elementum rhoncus odio eget,
+                    sollicitudin finibus est. Donec nunc turpis, aliquam sed augue a, imperdiet dictum lorem. Mauris
+                    vitae neque dui. Donec mollis, tortor eget tristique malesuada, nisl dolor iaculis libero, vitae
+                    viverra risus nulla ut nunc. Sed ac lorem molestie, aliquam tellus sed, viverra velit. Vestibulum
+                    consequat mi id nunc finibus lobortis. Quisque ac magna vitae lorem pulvinar pellentesque faucibus
+                    id dolor. Morbi a mollis quam. Quisque non lacus quis augue sodales feugiat. Aenean non malesuada
+                    libero. Ut interdum pulvinar eros in vulputate. Cras non mauris justo. Suspendisse molestie sapien
+                    turpis, eu rutrum orci dictum id.
+                </p>
+                <p>
+                    Ut vitae risus in arcu porttitor convallis. Integer sed magna tellus. Morbi lobortis turpis vitae
+                    orci mattis eleifend. Pellentesque sed orci tempor, ornare leo quis, hendrerit magna. Phasellus
+                    augue massa, malesuada id erat eu, interdum fringilla arcu. Pellentesque feugiat nisi sed turpis
+                    convallis maximus. Vivamus viverra justo nec porta dapibus. Aliquam erat volutpat. Maecenas auctor,
+                    quam non fermentum semper, risus nisl faucibus diam, vel varius tellus lorem ut est. Maecenas
+                    hendrerit ipsum mi, eu commodo enim pulvinar consequat.
+                </p>
+                <p>
+                    Donec dignissim felis quis justo aliquam consequat. Vestibulum ante ipsum primis in faucibus orci
+                    luctus et ultrices posuere cubilia curae; Donec facilisis luctus aliquam. Cras magna arcu, semper ut
+                    ultricies mollis, efficitur ac mi. Quisque ut lobortis diam, nec vestibulum mi. Nullam in lorem ut
+                    nisi varius ultrices. Nulla quis ligula non massa feugiat vulputate. Aenean luctus non mauris a
+                    ultricies. Sed sed sapien nec arcu ultricies luctus. Integer nec erat nec ex gravida congue ac
+                    viverra sem. Mauris ullamcorper enim vel dui consectetur suscipit. Maecenas vel magna non sapien
+                    imperdiet luctus. Maecenas eget risus fermentum, facilisis dolor ullamcorper, consectetur dui. Proin
+                    eu mi eleifend, maximus eros eget, ornare eros.
+                </p>
+            </div> -->
+            </div>
+            <div class="comment text-center">References available upon request</div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/25e2406d17.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://unpkg.com/vue@next"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <script>
+
+        var app = new Vue({
+            el: '#main',
+            data: function () {
+                return { vm: null }
+            },
+            computed: {
+                formattedSkills() {
+                    if (this.vm.skills) {
+                        return this.vm.skills.join(", ")
+                    }
+                },
+                phoneUrl() {
+                    if (this.vm.phone) {
+                        return `tel:+1${this.vm.phone.replace(/\D+/g,'')}`
+                    }
+                },
+                linkedinUrl() {
+                    if (this.vm.linkedin) {
+                        return `https://www.linkedin.com/in/${this.vm.linkedin}/`
+                    }
+                },
+                githubUrl() {
+                    if (this.vm.github) {
+                        return `https://github.com/${this.vm.github}`
+                    }
+                }
+            },
+            methods: {
+
+            },
+            created() {
+                let qs = new Date().getTime();
+                let url = `/data.json?q=${qs}`;
+                let xhr = new XMLHttpRequest();
+                let self = this;
+                xhr.open('GET', url);
+                xhr.onload = function () {
+                    if (this.status >= 200 && this.status < 300) {
+                        self.vm = JSON.parse(xhr.response);
+                        /* setTimeout(function () {
+                            context.state.isLoaded = true;
+                        }, 300); */
+                    }
+                };
+                xhr.onerror = function () {
+
+                };
+                xhr.send();
+
+            }
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>
