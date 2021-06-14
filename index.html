@@ -75,7 +75,7 @@
                     Experience</div>
             </div>
             <div class="vh-100" style="column-count: 2; column-fill: auto;">
-                <div class="mb-2" v-for="item in vm.workHistory">
+                <div class="mb-3" v-for="item in vm.workHistory">
                     <div>
                         <span class="organization" v-if="item.organization">{{item.organization}},</span>
                         <span class="location" v-if="item.location" v-html="item.location"></span>    
@@ -86,6 +86,9 @@
                             <span class="comment d-inline-block" v-if="role.fromDate">{{role.fromDate}} - {{role.toDate}}</span>    
                         </div>
                         <p class="mt-1" v-if="role.description" v-html="role.description"></p>
+                        <ul class="fa-ul mb-1 ml-2" v-if="role.highlights">
+                           <li v-for="highlight in role.highlights"><span class="fa-li"><i class="far fa-plus-square"></i></span> <em>{{ highlight }}</em></li> 
+                        </ul>
                         <div v-if="role.environment">
                             <span class="comment">Environment&mdash; {{role.environment}}</span>
                         </div>

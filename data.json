@@ -1,6 +1,6 @@
 {
     "name": "Stephen Hebert",
-    "summary": "Full stack web development professional seeking fully remote opportunities in development, management, and technical training.",
+    "summary": "Experienced full stack web development professional seeking fully remote opportunities in development, management, and technical training.",
     "email": "stephenjosephhebert@gmail.com",
     "phone": "(225) 715-5191",
     "linkedin": "stephenjosephhebert",
@@ -29,10 +29,12 @@
         "Github",
         "Windows", 
         "*nix", 
+        "QA",
         "Active Directory", 
         "IIS", 
         "Octopus", 
-        "Veracode"
+        "Veracode",
+        "Cypress"
     ],
     "workHistory": [
         {
@@ -43,20 +45,21 @@
                     "title": "Lead Developer / Manager",
                     "fromDate": "May 2019",
                     "toDate": "Present",
-                    "description": "",
+                    "description": "Managing development for enterprise Agile modernization project.  Supporting statewide developer recruiting efforts.",
                     "highlights": [
-                        ""
+                        "Architected PBAC system to meet business needs and InfoSec requirements.",
+                        "Led development of public-facing reactive web application for state agency office listing."
                     ]
                 },
                 {
                     "title": "Senior Developer",
                     "fromDate": "Jul 2018",
                     "toDate": "May 2019",
-                    "description": "",
+                    "description": "Coded, tested, reviewed ... ",
                     "highlights": [
-                        ""
+                        "Developed Javascript libraries for custom typeahead and grid UI components."
                     ],
-                    "environment": ""
+                    "environment": "Javascript, Vue, C#, Github, Agile, HTML, CSS, JIRA, AWS S3, ADFS, Identity Server, IIS, SQL Server 2016, Octopus, Cypress, Veracode, Figma"
                 }
             ]
         },
@@ -68,7 +71,7 @@
                     "title": "Technical Analyst",
                     "fromDate": "Dec 2015",
                     "toDate": "Jul 2018",
-                    "description": ""
+                    "description": "User, network, server & cloud service administration.  Remote & on-site technical support.  "
                 }
             ]
         },
@@ -80,7 +83,7 @@
                     "title": "Developer, Consultant, Technical Trainer",
                     "fromDate": "Nov 2001",
                     "toDate": "Dec 2015",
-                    "description": ""
+                    "description": "Consulted for various web design & development projects.  Provided individual instruction on topics related to web development."
                 }
             ]
         },
@@ -92,7 +95,12 @@
                     "title": "Developer & Support Analyst",
                     "fromDate": "Dec 2006",
                     "toDate": "Apr 2008",
-                    "description": ""
+                    "description": "Coded, tested, provisioned, supported, administrated proprietary network product and service.",
+                    "highlights": [
+                        "Developed web-based network configuration interface for modified routing appliance.",
+                        "Implemented tools to foster developer communication and collaboration."
+                    ],
+                    "environment":"Linux, Apache, MySQL, PHP, HTML, Javascript, Subversion, Bugzilla"
                 }
             ]
         },
@@ -104,7 +112,8 @@
                     "title": "QA & Support Analyst",
                     "fromDate": "Jun 2006",
                     "toDate": "Oct 2006",
-                    "description": ""
+                    "description": "Manually tested user interfaces and function of proprietary rackmount appliance, and documented any existing issues. Provisioned and shipped Espion products.  Provided technical support via phone and email.",
+                    "environment": "Solaris, Bash, PHP, Trac"
                 }
             ]
         },
@@ -116,7 +125,8 @@
                     "title": "Developer & Support Analyst",
                     "fromDate": "Nov 2001",
                     "toDate": "Jun 2006",
-                    "description": ""
+                    "description": "Developed & maintained static website.  Provided hardware, software, peripheral, database & network support. ",
+                    "environment": "HTML, Javascript, Photoshop"
                 }
             ]
         },
@@ -128,7 +138,8 @@
                     "title": "Technical Instructor / DBA",
                     "fromDate": "Nov 2001",
                     "toDate": "Jun 2006",
-                    "description": ""
+                    "description": "Provided group & individual instruction on topics related to web development & office software. Maintained Lotus Notes databases & applications.",
+                    "environment": "HTML, CSS, Javascript, Photoshop, Lotus Notes"
                 }
             ]
         },
@@ -137,10 +148,11 @@
             "location": "Brusly, LA",
             "roles": [
                 {
-                    "title": "Developer",
+                    "title": "Developer / Co-founder",
                     "fromDate": "Aug 2000",
                     "toDate": "May 2003",
-                    "description": ""
+                    "description": "Designed, developed & deployed static websites for small private & public clients.",
+                    "environment": "HTML, Javascript, Photoshop, Unix, DNS"
                 }
             ]
         },
@@ -152,7 +164,7 @@
                     "title": "Support Technician",
                     "fromDate": "May 2001",
                     "toDate": "Nov 2001",
-                    "description": ""
+                    "description": "Provided technical support via phone and in person.  Initialized, installed, configured, issued & supported Windows workstations.  Troubleshooted and repaired computer systems and peripherals."
                 }
             ]
         }

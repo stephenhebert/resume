@@ -79,3 +79,15 @@ body,
 a {
     color: #495057;
 }
+
+p {
+    margin-bottom: 0.3rem !important;
+}
+
+ul, ol {
+    padding-left: 1rem;
+}
+
+.fa-ul {
+    margin-left: 1.5rem !important;
+}
