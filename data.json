@@ -22,6 +22,7 @@
         "Bootstrap", 
         "Agile", 
         "ASP.Net Core", 
+        "C#",
         "PHP", 
         "CSS", 
         "NPM/Webpack", 
@@ -45,21 +46,23 @@
                     "title": "Lead Developer / Manager",
                     "fromDate": "May 2019",
                     "toDate": "Present",
-                    "description": "Managing development for enterprise Agile modernization project.  Supporting statewide developer recruiting efforts.",
+                    "description": "Managing development for enterprise Agile modernization project.  Coding, testing, reviewing, deploying of application.  Providing technical guidance to project managers, product owners, & business analysts. Migrating database systems from Lotus Notes & mainframe systems to SQL Server. Developing standards for security, auditing, CI/CD, UI/UX, performance & automated testing. Configuring servers to meet project needs. Diagnosing & resolving network & production issues.  Supporting statewide developer recruiting, training & mentorship.",
                     "highlights": [
                         "Architected PBAC system to meet business needs & InfoSec requirements.",
-                        "Led development of public-facing reactive web application for state agency office listing."
+                        "Led development of public-facing reactive web application for state agency for performance, maintainability, & accessibility.",
+                        "Managed development of second public-facing reactive web application.",
+                        "Spearheaded department-wide developer collaboration & training."
                     ]
                 },
                 {
                     "title": "Senior Developer",
                     "fromDate": "Jul 2018",
                     "toDate": "May 2019",
-                    "description": "Coded, tested, reviewed ... ",
+                    "description": "Coded, tested, reviewed, deployed, released, administrated, maintained, supported enterprise Agile modernization project.",
                     "highlights": [
                         "Developed Javascript libraries for custom typeahead & grid UI components."
                     ],
-                    "environment": "Javascript, Vue, C#, Github, Agile, HTML, CSS, JIRA, AWS S3, ADFS, Identity Server, IIS, SQL Server 2016, Octopus, Cypress, Veracode, Figma"
+                    "environment": "Javascript, Vue, C#, Github, Agile, HTML, CSS, JIRA, AWS S3, ADFS, Identity Server, IIS, SQL Server 2016, EF Core, Octopus, Cypress, Veracode, Figma"
                 }
             ]
         },
@@ -71,7 +74,7 @@
                     "title": "Technical Analyst",
                     "fromDate": "Dec 2015",
                     "toDate": "Jul 2018",
-                    "description": "User, network, server & cloud service administration.  Remote & on-site technical support.  "
+                    "description": "Provided user, network, server & cloud service administration & technical support."
                 }
             ]
         },
