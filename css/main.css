@@ -93,7 +93,8 @@ ul, ol {
 }
 
 @media print {
-    #main {
+    #print {
         margin: 0 !important;
+        display: inherit !important;
     }
 }

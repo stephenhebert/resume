@@ -3,14 +3,16 @@
 <!-- . revamp font import? -->
 <!-- . tree shaking? -->
 <!-- . replace absolute width with relative width -->
-<!-- . print style sheet vs screen -->
 <!-- . obscure email address? -->
-<!-- . ascii art -->
 <!-- . web version -->
+<!-- . javascript console -->
+<!-- . debug messages -->
+<!-- . ascii art -->
 <!-- . update to vue3 -->
 <!-- . loading animation -->
 <!-- . implement axios -->
 <!-- . think of good way to highlight work on PTT -->
+<!-- . vue production version -->
 
 <html lang="en">
 
@@ -29,78 +31,88 @@
 </head>
 
 <body class="bg-dark">
-    <div id="main" class="container-fluid mx-auto my-4 bg-white py-4 p-5"
-        style="max-width: 8.5in; max-height: 11in; min-height: 11in;" v-if="vm" v-cloak>
+    <div id="main" v-cloak v-if="vm">
+        <div id="screen">
 
-        <div class="row">
-            <div class="col-8">
-                <div class="name" v-html="vm.name"></div>
-                <div class="summary" v-if="vm.summary" v-html="vm.summary"></div>
-            </div>
-            <div class="col-4 featured text-end">
-                <div v-if="vm.email"><i class="fas fa-envelope"></i> {{vm.email}}</div>
-                <div v-if="vm.phone"><i class="fas fa-phone"></i> <a target="_blank" :href="phoneUrl"><b>{{vm.phone}}</b></a> </div>
-                <div v-if="vm.linkedin"><i class="fab fa-linkedin"></i> <a target="_blank" :href="linkedinUrl">{{vm.linkedin}}</a></div>
-                <div v-if="vm.github"><i class="fab fa-github"></i> <a target="_blank" :href="githubUrl">{{vm.github}}</a></div>
-                <div v-if="vm.location"><i class="fas fa-map-marker-alt"></i> {{vm.location}}</div>
-            </div>
         </div>
-        <hr class="mt-1 mb-2 minor">
-        <div class="row">
-            <div class="col-8" v-if="vm.skills">
-                <div class="section-title text-uppercase">
-                    <!-- <i class="fas fa-fist-raised"></i> -->
-                    <i class="fas fa-hammer"></i>
-                    Skills</div>
-                <p v-html="formattedSkills"></p>
-            </div>
-            <div class="col-4" v-if="vm.education">
-                <div class="section-title text-uppercase"><i class="fas fa-graduation-cap"></i> Education</div>
-                <div v-for="item in vm.education">
-                    <div>
-                        <span class="organization">{{item.institution}},</span>
-                        <span class="location">{{item.location}}</span>
-                    </div>
-                    <div>
-                        <span class="emphasized">{{item.degree}}</span>
-                        <span class="comment">{{item.date}}</span>    
-                    </div>
+        <div id="print" class="container-fluid mx-auto my-4 bg-white py-4 p-5 d-none"
+            style="max-width: 8.5in; max-height: 11in; min-height: 11in;">
+
+            <div class="row">
+                <div class="col-8">
+                    <div class="name" v-html="vm.name"></div>
+                    <div class="summary" v-if="vm.summary" v-html="vm.summary"></div>
+                </div>
+                <div class="col-4 featured text-end">
+                    <div v-if="vm.email"><i class="fas fa-envelope"></i> {{vm.email}}</div>
+                    <div v-if="vm.phone"><i class="fas fa-phone"></i> <a target="_blank"
+                            :href="phoneUrl"><b>{{vm.phone}}</b></a> </div>
+                    <div v-if="vm.linkedin"><i class="fab fa-linkedin"></i> <a target="_blank"
+                            :href="linkedinUrl">{{vm.linkedin}}</a></div>
+                    <div v-if="vm.github"><i class="fab fa-github"></i> <a target="_blank"
+                            :href="githubUrl">{{vm.github}}</a></div>
+                    <div v-if="vm.location"><i class="fas fa-map-marker-alt"></i> {{vm.location}}</div>
                 </div>
             </div>
-        </div>
-        <!-- <hr class="mt-1 mb-2 minor"> -->
-        <div class="row">
-            <div class="col-12">
-                <div class=" section-title text-uppercase">
-                    <i class="fas fa-history"></i>
-                    Experience</div>
-            </div>
-            <div style="column-count: 2; column-fill: auto;">
-                <div class="mb-3" v-for="item in vm.workHistory">
-                    <div>
-                        <span class="organization" v-if="item.organization">{{item.organization}},</span>
-                        <span class="location" v-if="item.location" v-html="item.location"></span>    
-                    </div>
-                    <div v-for="role in item.roles">
-                        <div class="mt-1">
-                            <span class="emphasized d-inline-block" v-if="role.title" v-html="role.title"></span>
-                            <span class="comment d-inline-block" v-if="role.fromDate">{{role.fromDate}} - {{role.toDate}}</span>    
+            <hr class="mt-1 mb-2 minor">
+            <div class="row">
+                <div class="col-8" v-if="vm.skills">
+                    <div class="section-title text-uppercase">
+                        <!-- <i class="fas fa-fist-raised"></i> -->
+                        <i class="fas fa-hammer"></i>
+                        Skills</div>
+                    <p v-html="formattedSkills"></p>
+                </div>
+                <div class="col-4" v-if="vm.education">
+                    <div class="section-title text-uppercase"><i class="fas fa-graduation-cap"></i> Education</div>
+                    <div v-for="item in vm.education">
+                        <div>
+                            <span class="organization">{{item.institution}},</span>
+                            <span class="location">{{item.location}}</span>
                         </div>
-                        <p class="mt-1" v-if="role.description" v-html="role.description"></p>
-                        <ul class="fa-ul mb-1 ml-2" v-if="role.highlights">
-                           <li v-for="highlight in role.highlights"><span class="fa-li"><i class="far fa-plus-square"></i></span> <em>{{ highlight }}</em></li> 
-                        </ul>
-                        <div v-if="role.environment">
-                            <span class="comment">Environment&mdash; {{role.environment}}</span>
+                        <div>
+                            <span class="emphasized">{{item.degree}}</span>
+                            <span class="comment">{{item.date}}</span>
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div class="comment text-center mt-4">References available upon request</div>
-        </div>
-    </div>
+            <!-- <hr class="mt-1 mb-2 minor"> -->
+            <div class="row">
+                <div class="col-12">
+                    <div class=" section-title text-uppercase">
+                        <i class="fas fa-history"></i>
+                        Experience</div>
+                </div>
+                <div style="column-count: 2; column-fill: auto;">
+                    <div class="mb-3" v-for="item in vm.workHistory">
+                        <div>
+                            <span class="organization" v-if="item.organization">{{item.organization}},</span>
+                            <span class="location" v-if="item.location" v-html="item.location"></span>
+                        </div>
+                        <div v-for="role in item.roles">
+                            <div class="mt-1">
+                                <span class="emphasized d-inline-block" v-if="role.title" v-html="role.title"></span>
+                                <span class="comment d-inline-block" v-if="role.fromDate">{{role.fromDate}} -
+                                    {{role.toDate}}</span>
+                            </div>
+                            <p class="mt-1" v-if="role.description" v-html="role.description"></p>
+                            <ul class="fa-ul mb-1 ml-2" v-if="role.highlights">
+                                <li v-for="highlight in role.highlights"><span class="fa-li"><i
+                                            class="far fa-plus-square"></i></span> <em>{{ highlight }}</em></li>
+                            </ul>
+                            <div v-if="role.environment">
+                                <span class="comment">Environment&mdash; {{role.environment}}</span>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="comment text-center mt-4">References available upon request</div>
+            </div>
+        </div> <!-- END #print -->
+
+    </div> <!-- END #main -->
     <script src="https://kit.fontawesome.com/25e2406d17.js" crossorigin="anonymous"></script>
     <!-- <script src="https://unpkg.com/vue@next"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
@@ -120,7 +132,7 @@
                 },
                 phoneUrl() {
                     if (this.vm.phone) {
-                        return `tel:+1${this.vm.phone.replace(/\D+/g,'')}`
+                        return `tel:+1${this.vm.phone.replace(/\D+/g, '')}`
                     }
                 },
                 linkedinUrl() {
