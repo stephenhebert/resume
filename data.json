@@ -50,7 +50,7 @@
                     "title": "Lead Developer / Manager",
                     "fromDate": "May 2019",
                     "toDate": "Present",
-                    "description": "Managing development for enterprise Agile modernization project.  Coding, testing, reviewing & deploying application.  Providing technical guidance to project managers, product owners & business analysts. Migrating legacy database systems. Developing standards for security, auditing, CI/CD, UI/UX, performance & automated testing. Supporting statewide developer recruiting, training & mentorship. Configuring servers to meet project needs. Diagnosing & resolving network & production issues.",
+                    "description": "Managing development for enterprise Agile modernization project.  Coding, testing, reviewing & deploying applications.  Providing technical guidance to project managers, product owners & business analysts. Migrating legacy database systems. Developing standards for security, auditing, CI/CD, UI/UX, performance & automated testing. Supporting statewide developer recruiting, training & mentorship. Configuring servers to meet project needs. Diagnosing & resolving network & production issues.",
                     "highlights": [
                         "Architected PBAC system to meet business & InfoSec requirements.",
                         "Led redevelopment of two public-facing reactive web applications to optimize UX, performance & accessibility."
@@ -60,7 +60,7 @@
                     "title": "Senior Developer",
                     "fromDate": "Jul 2018",
                     "toDate": "May 2019",
-                    "description": "Coded, tested, reviewed, deployed, released, administrated, maintained & supported application.",
+                    "description": "Coded, tested, reviewed, deployed, released, administrated, maintained & supported modern enterprise applications.",
                     "highlights": [
                         "Developed Javascript libraries for custom typeahead & grid UI components."
                     ],
