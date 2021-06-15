@@ -10,7 +10,7 @@
         {
             "institution": "Louisiana State University",
             "location": "Baton Rouge, LA",
-            "degree": "Bachelor of Science: Computer Science",
+            "degree": "B.S., Computer Science",
             "date": "May 2006"
         }
     ],
@@ -46,23 +46,21 @@
                     "title": "Lead Developer / Manager",
                     "fromDate": "May 2019",
                     "toDate": "Present",
-                    "description": "Managing development for enterprise Agile modernization project.  Coding, testing, reviewing, deploying of application.  Providing technical guidance to project managers, product owners, & business analysts. Migrating database systems from Lotus Notes & mainframe systems to SQL Server. Developing standards for security, auditing, CI/CD, UI/UX, performance & automated testing. Configuring servers to meet project needs. Diagnosing & resolving network & production issues.  Supporting statewide developer recruiting, training & mentorship.",
+                    "description": "Managing development for enterprise Agile modernization project.  Coding, testing, reviewing & deploying application.  Providing technical guidance to project managers, product owners & business analysts. Migrating legacy database systems. Developing standards for security, auditing, CI/CD, UI/UX, performance & automated testing. Supporting statewide developer recruiting, training & mentorship. Configuring servers to meet project needs. Diagnosing & resolving network & production issues.",
                     "highlights": [
-                        "Architected PBAC system to meet business needs & InfoSec requirements.",
-                        "Led development of public-facing reactive web application for state agency for performance, maintainability, & accessibility.",
-                        "Managed development of second public-facing reactive web application.",
-                        "Spearheaded department-wide developer collaboration & training."
+                        "Architected PBAC system to meet business & InfoSec requirements.",
+                        "Led redevelopment of two public-facing reactive web applications to optimize UX, performance & accessibility."
                     ]
                 },
                 {
                     "title": "Senior Developer",
                     "fromDate": "Jul 2018",
                     "toDate": "May 2019",
-                    "description": "Coded, tested, reviewed, deployed, released, administrated, maintained, supported enterprise Agile modernization project.",
+                    "description": "Coded, tested, reviewed, deployed, released, administrated, maintained & supported application.",
                     "highlights": [
                         "Developed Javascript libraries for custom typeahead & grid UI components."
                     ],
-                    "environment": "Javascript, Vue, C#, Github, Agile, HTML, CSS, JIRA, AWS S3, ADFS, Identity Server, IIS, SQL Server 2016, EF Core, Octopus, Cypress, Veracode, Figma"
+                    "environment": "Javascript, Vue, C#, Github, Agile, HTML, CSS, JIRA, AWS, ADFS, Identity Server, IIS, SQL Server 2016, EF Core, Octopus, Cypress, Veracode, Figma"
                 }
             ]
         },
@@ -86,7 +84,7 @@
                     "title": "Developer, Consultant, Technical Trainer",
                     "fromDate": "Nov 2001",
                     "toDate": "Dec 2015",
-                    "description": "Consulted for various web design & development projects.  Provided individual instruction on topics related to web development."
+                    "description": "Consulted on various web design & development projects.  Delivered individualized instruction in web development."
                 }
             ]
         },
@@ -98,12 +96,11 @@
                     "title": "Developer & Support Analyst",
                     "fromDate": "Dec 2006",
                     "toDate": "Apr 2008",
-                    "description": "Coded, tested, provisioned, supported, administrated proprietary network product & service.",
+                    "description": "Coded, tested, provisioned, supported & administrated proprietary network product & service.",
                     "highlights": [
-                        "Developed web-based network configuration interface for modified routing appliance.",
-                        "Implemented tools to foster developer communication & collaboration."
+                        "Developed web-based network configuration interface for modified routing appliance."
                     ],
-                    "environment":"Linux, Apache, MySQL, PHP, HTML, Javascript, Subversion, Bugzilla"
+                    "environment":"Linux, Apache, MySQL, PHP, HTML, Javascript"
                 }
             ]
         },
@@ -115,8 +112,7 @@
                     "title": "QA & Support Analyst",
                     "fromDate": "Jun 2006",
                     "toDate": "Oct 2006",
-                    "description": "Manually tested user interfaces & function of proprietary rackmount appliance & documented any existing issues. Provisioned & shipped Espion products.  Provided technical support via phone & email.",
-                    "environment": "Solaris, Bash, PHP, Trac"
+                    "description": "Manually tested user interfaces & function of proprietary rackmount appliance & documented issues. Provisioned & shipped products.  Provided remote technical support."
                 }
             ]
         },
@@ -139,9 +135,9 @@
             "roles": [
                 {
                     "title": "Technical Instructor / DBA",
-                    "fromDate": "Nov 2001",
-                    "toDate": "Jun 2006",
-                    "description": "Provided group & individual instruction on topics related to web development & office software. Maintained Lotus Notes databases & applications.",
+                    "fromDate": "Aug 2003",
+                    "toDate": "May 2005",
+                    "description": "Delivered group & individualized instruction on web development & office software. Maintained legacy databases & applications.",
                     "environment": "HTML, CSS, Javascript, Photoshop, Lotus Notes"
                 }
             ]
@@ -151,11 +147,10 @@
             "location": "Brusly, LA",
             "roles": [
                 {
-                    "title": "Developer / Co-founder",
+                    "title": "Developer / Co-Founder",
                     "fromDate": "Aug 2000",
                     "toDate": "May 2003",
-                    "description": "Designed, developed & deployed static websites for small private & public clients.",
-                    "environment": "HTML, Javascript, Photoshop, Unix, DNS"
+                    "description": "Designed, developed & deployed static websites for government & industry clients."
                 }
             ]
         },
@@ -167,7 +162,7 @@
                     "title": "Support Technician",
                     "fromDate": "May 2001",
                     "toDate": "Nov 2001",
-                    "description": "Provided technical support via phone & in person.  Initialized, installed, configured, issued & supported Windows workstations.  Troubleshooted & repaired computer systems & peripherals."
+                    "description": "Initialized, installed, configured, issued & supported Windows workstations.  Troubleshooted & repaired computer systems & peripherals."
                 }
             ]
         }

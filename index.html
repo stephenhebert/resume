@@ -10,6 +10,7 @@
 <!-- . update to vue3 -->
 <!-- . loading animation -->
 <!-- . implement axios -->
+<!-- . think of good way to highlight work on PTT -->
 
 <html lang="en">
 
@@ -56,10 +57,14 @@
             <div class="col-4" v-if="vm.education">
                 <div class="section-title text-uppercase"><i class="fas fa-graduation-cap"></i> Education</div>
                 <div v-for="item in vm.education">
-                    <span class="organization">{{item.institution}},</span>
-                    <span class="location">{{item.location}}&mdash;</span>
-                    <span class="emphasized">{{item.degree}}</span>
-                    <span class="comment">{{item.date}}</span>
+                    <div>
+                        <span class="organization">{{item.institution}},</span>
+                        <span class="location">{{item.location}}</span>
+                    </div>
+                    <div>
+                        <span class="emphasized">{{item.degree}}</span>
+                        <span class="comment">{{item.date}}</span>    
+                    </div>
                 </div>
             </div>
             <!-- <div class="col-2">
@@ -81,7 +86,7 @@
                         <span class="location" v-if="item.location" v-html="item.location"></span>    
                     </div>
                     <div v-for="role in item.roles">
-                        <div class="mb-1">
+                        <div class="mt-1">
                             <span class="emphasized d-inline-block" v-if="role.title" v-html="role.title"></span>
                             <span class="comment d-inline-block" v-if="role.fromDate">{{role.fromDate}} - {{role.toDate}}</span>    
                         </div>
@@ -96,7 +101,7 @@
                 </div>
 
             </div>
-            <div class="comment text-center mt-3">References available upon request</div>
+            <div class="comment text-center mt-2">References available upon request</div>
         </div>
     </div>
 
