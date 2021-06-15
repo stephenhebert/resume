@@ -18,6 +18,7 @@
         "Javascript", 
         "VueJS", 
         "SQL", 
+        "AJAX",
         "HTML", 
         "Bootstrap", 
         "Agile", 
@@ -39,7 +40,8 @@
         "SSIS",
         "Remote Work",
         "DevOps",
-        "CI/CD"
+        "CI/CD",
+        "Recruiting"
     ],
     "workHistory": [
         {
@@ -54,6 +56,9 @@
                     "highlights": [
                         "Architected PBAC system to meet business & InfoSec requirements.",
                         "Led redevelopment of two public-facing reactive web applications to optimize UX, performance & accessibility."
+                    ],
+                    "hiddenHighlights": [
+                        "Developed application to track network outages to assess impact on team productivity"
                     ]
                 },
                 {
@@ -63,6 +68,11 @@
                     "description": "Coded, tested, reviewed, deployed, released, administrated, maintained & supported modern enterprise applications.",
                     "highlights": [
                         "Developed Javascript libraries for custom typeahead & grid UI components."
+                    ],
+                    "hiddenHighlights": [
+                        "Developed application to track network outages to assess impact on team productivity",
+                        "Developed application / interface for education technical readiness data collection and reporting to assess risk",
+                        "Delivered department-wide trainings on javascript and effective communication"
                     ],
                     "environment": "Javascript, VueJS, C#, Github, Agile, HTML, CSS, JIRA, AWS, ADFS, Identity Server, IIS, SQL Server 2016, EF Core, Octopus, Cypress, Veracode, Figma, SSIS"
                 }
@@ -97,7 +107,7 @@
             "location": "Ipswich, England, UK & Seattle, WA",
             "roles": [
                 {
-                    "title": "Developer & Support Analyst",
+                    "title": "Developer / Support Analyst",
                     "fromDate": "Dec 2006",
                     "toDate": "Apr 2008",
                     "description": "Coded, tested, provisioned, supported & administrated proprietary network product & service.",
@@ -113,7 +123,7 @@
             "location": "Baton Rouge, LA",
             "roles": [
                 {
-                    "title": "QA & Support Analyst",
+                    "title": "QA / Support Analyst",
                     "fromDate": "Jun 2006",
                     "toDate": "Oct 2006",
                     "description": "Manually tested user interfaces & function of proprietary rackmount appliance & documented issues. Provisioned & shipped products.  Provided remote technical support."
@@ -125,7 +135,7 @@
             "location": "Baton Rouge, LA",
             "roles": [
                 {
-                    "title": "Developer & Support Analyst",
+                    "title": "Developer / Support Analyst",
                     "fromDate": "Nov 2001",
                     "toDate": "Jun 2006",
                     "description": "Developed & maintained static website.  Provided hardware, software, peripheral, database & network support. ",
