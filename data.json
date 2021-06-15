@@ -2,7 +2,7 @@
     "name": "Stephen Hebert",
     "summary": "Experienced full stack web development professional seeking fully remote opportunities in development, management & technical training.",
     "email": "stephenjosephhebert@gmail.com",
-    "phone": "(225) 715-5191",
+    "phone": "‪(337) 602-8448",
     "linkedin": "stephenjosephhebert",
     "github": "stephenhebert",
     "location": "Lafayette, LA",
@@ -16,7 +16,7 @@
     ],
     "skills": [
         "Javascript", 
-        "Vue", 
+        "VueJS", 
         "SQL", 
         "HTML", 
         "Bootstrap", 
@@ -35,12 +35,16 @@
         "IIS", 
         "Octopus", 
         "Veracode",
-        "Cypress"
+        "Cypress",
+        "SSIS",
+        "Remote Work",
+        "DevOps",
+        "CI/CD"
     ],
     "workHistory": [
         {
             "organization": "State of Louisiana",
-            "location": "Baton Rouge, LA",
+            "location": "Baton Rouge, LA & Remote",
             "roles": [
                 {
                     "title": "Lead Developer / Manager",
@@ -60,7 +64,7 @@
                     "highlights": [
                         "Developed Javascript libraries for custom typeahead & grid UI components."
                     ],
-                    "environment": "Javascript, Vue, C#, Github, Agile, HTML, CSS, JIRA, AWS, ADFS, Identity Server, IIS, SQL Server 2016, EF Core, Octopus, Cypress, Veracode, Figma"
+                    "environment": "Javascript, VueJS, C#, Github, Agile, HTML, CSS, JIRA, AWS, ADFS, Identity Server, IIS, SQL Server 2016, EF Core, Octopus, Cypress, Veracode, Figma, SSIS"
                 }
             ]
         },
