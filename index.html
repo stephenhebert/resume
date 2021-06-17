@@ -152,7 +152,7 @@
             },
             created() {
                 let qs = new Date().getTime();
-                let url = `/data.json?q=${qs}`;
+                let url = `data.json?q=${qs}`;
                 let xhr = new XMLHttpRequest();
                 let self = this;
                 xhr.open('GET', url);
@@ -168,13 +168,8 @@
 
                 };
                 xhr.send();
-
             }
         })
-
-
-
-
 
     </script>
 </body>
