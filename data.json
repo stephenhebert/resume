@@ -5,6 +5,7 @@
     "phone": "‪(337) 602-8448",
     "linkedin": "stephenjosephhebert",
     "github": "stephenhebert",
+    "hackerrank": "stephenhebert",
     "location": "Lafayette, LA",
     "education": [
         {
@@ -42,7 +43,8 @@
         "DevOps",
         "CI/CD",
         "Recruiting",
-        "Powershell"
+        "Powershell",
+        "Regex"
     ],
     "workHistory": [
         {
